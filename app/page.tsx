@@ -12,7 +12,7 @@ export default async function Home() {
 
   const sum = items.reduce((acc, item) => acc + item.calorie, 0);
   // 1900-2000
-  const target = Math.floor(Math.random() * 100 + 1900);
+  const target = 1970;//Math.floor(Math.random() * 100 + 1900);
 
   return (
     <HomeClient intakeCalories={sum}
