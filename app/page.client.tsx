@@ -505,12 +505,12 @@ export function HomeClient({
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-center items-center top-[57px] right-0 w-[341px] h-[234px] bg-[#86002C] rounded-l-full text-center py-[27px] pl-[30px] pr-[11px]">
+        {over && !little && <div className="absolute flex justify-center items-center top-[57px] right-0 w-[341px] h-[234px] bg-[#86002C] rounded-l-full text-center py-[27px] pl-[30px] pr-[11px]">
           <p className="text-white text-[80px] font-archivo leading-tighter">
             too <br />
             many!!
           </p>
-        </div>
+        </div>}
         <div className="absolute -bottom-6 w-full z-30 flex flex-col justify-center items-center gap-0">
           <div className="relative top-[1px]">
             <svg
