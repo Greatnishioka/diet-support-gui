@@ -467,25 +467,50 @@ export function HomeClient({
                 <span
                   className={`text-[44px] font-noto ${over ? "text-[#FF0054]" : little ? "text-[#1E5CE5]" : "text-[#FFD400]"} font-bold `}
                 >
-                  いい感じ！
+                  {!over && !little
+                    ? "いい感じ！"
+                    : over ? "ちょっと多い！"
+                      : "少し足りない！"}
                 </span>
               </h3>
               <p
                 className={`text-3xl text-center font-noto ${over ? "text-[#FF0054]" : little ? "text-[#1E5CE5]" : "text-[#FFD400]"} font-bold`}
               >
-                ちょうどいい摂取カロリーです！
-                <br />
-                その調子！
+
+
+
+                {!over && !little
+                  ? (
+                    <>
+                      ちょうどいい摂取カロリーです！
+                      <br />
+                      その調子！
+                    </>
+                  )
+                  : over ? (
+                    <>
+                      ちょっと多い！
+                      <br />
+                      摂取カロリーを調整しよう！
+                    </>
+                  )
+                    : (
+                      <>
+                        少し足りない！
+                        <br />
+                        もう少し食べよう！
+                      </>
+                    )}
               </p>
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-center items-center top-[57px] right-0 w-[341px] h-[234px] bg-[#86002C] rounded-l-full text-center py-[27px] pl-[30px] pr-[11px]">
+        {over && !little && <div className="absolute flex justify-center items-center top-[57px] right-0 w-[341px] h-[234px] bg-[#86002C] rounded-l-full text-center py-[27px] pl-[30px] pr-[11px]">
           <p className="text-white text-[80px] font-archivo leading-tighter">
             too <br />
             many!!
           </p>
-        </div>
+        </div>}
         <div className="absolute -bottom-6 w-full z-30 flex flex-col justify-center items-center gap-0">
           <div className="relative top-[1px]">
             <svg
