@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export function HomeClient({
   //1900-2000のランダム
@@ -498,7 +498,7 @@ export function HomeClient({
                       <>
                         少し足りない！
                         <br />
-                        もう少し食べよう！
+                        たこ焼きを食べて、カロリーを調整しよう！
                       </>
                     )}
               </p>
