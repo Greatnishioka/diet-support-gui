@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+ 
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model calorie_intakes {
+  id      Int     @id @default(autoincrement())
+  food    String
+  date    String
+  calorie Int
+}
